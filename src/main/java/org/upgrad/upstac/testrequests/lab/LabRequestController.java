@@ -65,7 +65,7 @@ public class LabRequestController {
     @PreAuthorize("hasAnyRole('TESTER')")
     public List<TestRequest> getForTester()  {
 
-        // Implemented this Method - Prasanna
+        // Implemented this Method
         User tester = userLoggedInService.getLoggedInUser();
         return testRequestQueryService.findByTester(tester);
 
